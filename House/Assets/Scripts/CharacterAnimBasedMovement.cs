@@ -30,6 +30,8 @@ public class CharacterAnimBasedMovement : MonoBehaviour
     private bool mirrorIdle;
     private bool turn180;
 
+    
+
 
     void Start()
     {
@@ -37,7 +39,16 @@ public class CharacterAnimBasedMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void moveCharacter(float hInput, float vInput, Camera cam, bool jump, bool dash)
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "Pared")
+        {
+            animator.SetBool(mirrorIdleParam, mirrorIdle);
+            animator.SetFloat(motionParam, 0, StopAnimTime, Time.deltaTime);
+        }
+    }
+
+    public void moveCharacter(float hInput, float vInput, Camera cam, bool jump, bool dash, bool golpe)
     {
         //Calculate the Input Magnitude
         Speed = new Vector2(hInput, vInput).normalized.sqrMagnitude;
@@ -46,6 +57,16 @@ public class CharacterAnimBasedMovement : MonoBehaviour
         if (Speed >= Speed - rotationThreshold && dash)
         {
             Speed = 1.5f;
+        }
+
+        if (golpe)
+        {
+            animator.SetTrigger("Golpe");
+        }
+
+        if (jump)
+        {
+            animator.SetTrigger("Jump");
         }
 
         //Physically move player
@@ -105,4 +126,6 @@ public class CharacterAnimBasedMovement : MonoBehaviour
             mirrorIdle = false;
         }
     }
+
+    
 }

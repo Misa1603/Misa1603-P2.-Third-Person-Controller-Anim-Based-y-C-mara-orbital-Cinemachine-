@@ -292,7 +292,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378948166}
-  m_LocalRotation: {x: 0.3306919, y: -0.04116057, z: 0.014438347, w: 0.94273025}
+  m_LocalRotation: {x: 0.33069193, y: -0.041160576, z: 0.014438349, w: 0.94273025}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -546,7 +546,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689803309}
-  m_LocalRotation: {x: 0.33069193, y: -0.041160576, z: 0.014438349, w: 0.94273025}
+  m_LocalRotation: {x: 0.3306919, y: -0.04116057, z: 0.014438347, w: 0.94273025}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -802,7 +802,6 @@ GameObject:
   - component: {fileID: 844573678}
   - component: {fileID: 844573677}
   - component: {fileID: 844573676}
-  - component: {fileID: 844573679}
   m_Layer: 0
   m_Name: MAIN
   m_TagString: Untagged
@@ -876,40 +875,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844573679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844573675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &859491186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &899066930
 Transform:
   m_ObjectHideFlags: 0
@@ -1444,6 +1409,7 @@ GameObject:
   - component: {fileID: 1314867985}
   - component: {fileID: 1314867984}
   - component: {fileID: 1314867983}
+  - component: {fileID: 1314867987}
   m_Layer: 0
   m_Name: orbit
   m_TagString: Untagged
@@ -1497,11 +1463,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.01
+  far clip plane: 5000
+  field of view: 35
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1524,14 +1490,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314867982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.01437, y: 3.4989595, z: -10.665003}
+  m_LocalRotation: {x: 0.33069193, y: -0.041160576, z: 0.014438349, w: 0.94273025}
+  m_LocalPosition: {x: -18.575687, y: 6.139, z: -7.6598177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1314867987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314867982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1334842195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,7 +1830,7 @@ GameObject:
   - component: {fileID: 8744218712014167738}
   m_Layer: 0
   m_Name: Puerta Guess Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1875,7 +1875,7 @@ GameObject:
   - component: {fileID: 8281427614067301066}
   m_Layer: 0
   m_Name: Mesa Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 7045429261125717984}
   m_Layer: 0
   m_Name: MesaNoche Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2387,7 +2387,7 @@ GameObject:
   - component: {fileID: 2519088567439590965}
   m_Layer: 0
   m_Name: Pared4 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2583,7 +2583,7 @@ GameObject:
   - component: {fileID: 5004036539570634753}
   m_Layer: 0
   m_Name: Pared3 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2602,7 +2602,7 @@ GameObject:
   - component: {fileID: 8678795718803849186}
   m_Layer: 0
   m_Name: Escritorio Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2686,7 +2686,7 @@ GameObject:
   - component: {fileID: 5046768127346081545}
   m_Layer: 0
   m_Name: "Retrete Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2747,7 +2747,7 @@ GameObject:
   - component: {fileID: 5334037118583635062}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2789,7 +2789,7 @@ GameObject:
   - component: {fileID: 4178168253382893068}
   m_Layer: 0
   m_Name: Ventana Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2808,7 +2808,7 @@ GameObject:
   - component: {fileID: 7150578837968546814}
   m_Layer: 0
   m_Name: "Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3173,7 +3173,7 @@ GameObject:
   - component: {fileID: 8502988507951549205}
   m_Layer: 0
   m_Name: Puerta Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3276,7 +3276,7 @@ GameObject:
   - component: {fileID: 8897240366037053152}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3654,7 +3654,7 @@ GameObject:
   - component: {fileID: 6038392639649905659}
   m_Layer: 0
   m_Name: Cochise Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3673,7 +3673,7 @@ GameObject:
   - component: {fileID: 7499882816367783371}
   m_Layer: 0
   m_Name: "Pueta Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3692,7 +3692,7 @@ GameObject:
   - component: {fileID: 8482381506012352847}
   m_Layer: 0
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3832,7 +3832,7 @@ GameObject:
   - component: {fileID: 6408989971791182293}
   m_Layer: 0
   m_Name: Cama Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4155,7 +4155,7 @@ GameObject:
   - component: {fileID: 2679878010061052111}
   m_Layer: 0
   m_Name: Escritorio Guess Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4354,7 +4354,7 @@ GameObject:
   - component: {fileID: 6050287160690592069}
   m_Layer: 0
   m_Name: Caja1 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4682,7 +4682,7 @@ GameObject:
   - component: {fileID: 8957250507746731634}
   m_Layer: 0
   m_Name: PuertaSalida Hall.004
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 4035400435402754284}
   m_Layer: 0
   m_Name: PuertaSalida Hall.003
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 5906540216847714928}
   m_Layer: 0
   m_Name: Cama Guess Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5618,7 +5618,7 @@ GameObject:
   - component: {fileID: 8547539544279166511}
   m_Layer: 0
   m_Name: "Ba\xF1era Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5710,7 +5710,7 @@ GameObject:
   - component: {fileID: 5782492730886184682}
   m_Layer: 0
   m_Name: Estanteria Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5794,7 +5794,7 @@ GameObject:
   - component: {fileID: 4589970411710233293}
   m_Layer: 0
   m_Name: MesaNoche Guess Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6070,7 +6070,7 @@ GameObject:
   - component: {fileID: 4804055068162931245}
   m_Layer: 0
   m_Name: Armario Guess Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6089,7 +6089,7 @@ GameObject:
   - component: {fileID: 8198532865217667408}
   m_Layer: 0
   m_Name: PuertaMetal Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6195,7 +6195,7 @@ GameObject:
   - component: {fileID: 7614798890464328596}
   m_Layer: 0
   m_Name: Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6313,7 +6313,7 @@ GameObject:
   - component: {fileID: 8647710359561735368}
   m_Layer: 0
   m_Name: Caja2 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6340,7 +6340,7 @@ GameObject:
   - component: {fileID: 7000746296296943397}
   m_Layer: 0
   m_Name: Guest Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6973,7 +6973,7 @@ GameObject:
   - component: {fileID: 7110406430607546417}
   m_Layer: 0
   m_Name: PuertaSalida Hall.002
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7065,7 +7065,7 @@ GameObject:
   - component: {fileID: 9046831766044610947}
   m_Layer: 0
   m_Name: "MuebleCosas Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7901,7 +7901,7 @@ GameObject:
   - component: {fileID: 8914273569445571480}
   m_Layer: 0
   m_Name: Caja7 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7976,7 +7976,7 @@ GameObject:
   - component: {fileID: 9096724399045281476}
   m_Layer: 0
   m_Name: CestoRopa Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8356,7 +8356,7 @@ GameObject:
   - component: {fileID: 6234689504044732780}
   m_Layer: 0
   m_Name: Caja8 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8487,7 +8487,7 @@ GameObject:
   - component: {fileID: 8512081179867547174}
   m_Layer: 0
   m_Name: Armario Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8603,7 +8603,7 @@ GameObject:
   - component: {fileID: 5549680316022718474}
   m_Layer: 0
   m_Name: Puerta Cochise Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8686,7 +8686,7 @@ GameObject:
   - component: {fileID: 8330711692424741098}
   m_Layer: 0
   m_Name: Pared1 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8724,7 +8724,7 @@ GameObject:
   - component: {fileID: 8367672055801708835}
   m_Layer: 0
   m_Name: PuertaSalida Hall.005
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8751,7 +8751,7 @@ GameObject:
   - component: {fileID: 6671235901961419992}
   m_Layer: 0
   m_Name: "PasilloFuera Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9186,7 +9186,7 @@ GameObject:
   - component: {fileID: 7183782068468600566}
   m_Layer: 0
   m_Name: PuertaEntrada Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9467,7 +9467,7 @@ GameObject:
   - component: {fileID: 8512703534354239991}
   m_Layer: 0
   m_Name: Pared2 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9789,7 +9789,7 @@ GameObject:
   - component: {fileID: 8401952776199251752}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10122,7 +10122,7 @@ GameObject:
   - component: {fileID: 7827679166789043622}
   m_Layer: 0
   m_Name: EstanteHall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10603,7 +10603,7 @@ GameObject:
   - component: {fileID: 3927726669615163661}
   m_Layer: 0
   m_Name: Ventana Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10644,7 +10644,7 @@ GameObject:
   - component: {fileID: 8244541422500530128}
   m_Layer: 0
   m_Name: Silla Misa's Room
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10854,7 +10854,7 @@ GameObject:
   - component: {fileID: 8331606234816818575}
   m_Layer: 0
   m_Name: PuertaSalida Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10979,7 +10979,7 @@ GameObject:
   - component: {fileID: 8544783547220824489}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11161,7 +11161,7 @@ GameObject:
   - component: {fileID: 8508300726036372072}
   m_Layer: 0
   m_Name: Caja6 Hall
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11392,7 +11392,7 @@ GameObject:
   - component: {fileID: 9119875525568202909}
   m_Layer: 0
   m_Name: "Grifo Ba\xF1o"
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11553,7 +11553,7 @@ GameObject:
   - component: {fileID: 8707273951688439414}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11632,7 +11632,7 @@ GameObject:
   - component: {fileID: 8894691112085637480}
   m_Layer: 0
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -29,5 +29,20 @@ public struct InputData
         // Extra Movement
         dash = Input.GetButton("Dash");
         jump = Input.GetButtonDown("Jump");
+
+    }
+
+    public bool golpe()
+    {
+        bool golpebool;
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            golpebool = true;
+        }
+        else
+        {
+            golpebool = false;
+        }
+        return golpebool;
     }
 }

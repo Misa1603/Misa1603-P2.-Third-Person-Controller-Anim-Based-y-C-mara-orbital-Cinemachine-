@@ -21,6 +21,8 @@ public class PlayerTPSController : MonoBehaviour
         input.getInput();
 
         // Apply input to character
-        characterMovement.moveCharacter(input.hMovement, input.vMovement, cam, input.jump, input.dash);
+        characterMovement.moveCharacter(input.hMovement, input.vMovement, cam, input.jump, input.dash, input.golpe());
     }
+
+    
 }
